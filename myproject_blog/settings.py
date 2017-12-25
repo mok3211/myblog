@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '_dh%qrj*tzbdg35a3@cv-6k^vr&9azl@#o@2@qg@+6c0%i+32^'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1','localhost','.goodboymok.top']
 
 
 # Application definition
@@ -129,5 +129,5 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS =[
-    os.path.join(BASE_DIR,'templates/static')
+    os.path.join(BASE_DIR,'static')
 ]
