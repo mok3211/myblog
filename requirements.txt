@@ -1,0 +1,5 @@
+Django==1.10.6
+Markdown==2.6.10
+Pygments==2.2.0
+PyMySQL==0.8.0
+pytz==2017.3
