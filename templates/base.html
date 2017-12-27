@@ -45,7 +45,7 @@
                                 <li><a href="javascript:void(0)">联系我</a></li>
                                 <li><a href="javascript:void(0)">打赏</a></li>
                             </ul>
-                            <form class="navbar-form navbar-right " role="search">
+                            <form class="navbar-form navbar-right " role="search" action="{% url 'blog:search' %}"method="get" >
                                 <div class="form-group">
                                     <input type="text" class="form-control" placeholder="搜索">
                                 </div>
@@ -99,7 +99,7 @@
                     <ul>
                         {%  for category in category_list %}
                         <li>
-                            <a href="{% url 'blog:category' category.pk %}">{{ category.name }}<span class="post-count">(13)</span></a>
+                            <a href="{% url 'blog:category' category.pk %}">{{ category.name }}<span class="post-count">({{ category.num_posts }})</span></a>
                         <li>
                         {% empty %}
                            暂无分类！
@@ -109,6 +109,16 @@
 
                 <div class="widget widget-tag-cloud">
                     <h3 class="widget-title">标签云</h3>
+                    {% get_tags as tag_list %}
+                    <ul>
+                        {% for tag in tag_list %}
+                        <li>
+                            <a href="{% url 'blog:tag' tag.pk %}">{{ tag.name }}</a>
+                        </li>
+                        {% empty %}
+                        暂无标签！
+                        {% endfor %}
+                    </ul>
 
                 </div>
             </aside>

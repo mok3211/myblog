@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '_dh%qrj*tzbdg35a3@cv-6k^vr&9azl@#o@2@qg@+6c0%i+32^'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1','localhost','.goodboymok.top']
+ALLOWED_HOSTS = ['127.0.0.1','localhost','.goodboymok.top','39.106.128.192',]
 
 
 # Application definition
@@ -104,8 +104,6 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
-
 # Internationalization
 # https://docs.djangoproject.com/en/1.10/topics/i18n/
 
